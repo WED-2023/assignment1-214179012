@@ -102,4 +102,12 @@ body {
   #likeBtn:hover {
 	background-color: #b30000;
   }
+
+  audio {
+	transform: scale(1.5);
+	transform-origin: left;
+	margin: 20px auto;
+	display: block;
+  }
+  
   
