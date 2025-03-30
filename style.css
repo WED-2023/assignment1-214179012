@@ -107,7 +107,24 @@ body {
 	transform: scale(1.5);
 	transform-origin: left;
 	margin: 20px auto;
-	display: block;
+	display: block; 
+	margin-left: 0;
+  }
+
+  .photo-link {
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px 16px;
+	background-color: #ff4d4d;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+  }
+  
+  .photo-link:hover {
+	background-color: #b30000;
   }
   
   
