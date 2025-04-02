@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
   <title>Omni-Man - The Viltrumite Legacy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -53,9 +52,24 @@
     <br>
     <p>Snail's House - Hot Milk</p>
     <br>
-    <audio controls>
-      <source src="properties/Snail's House - Hot Milk.mp3" type="audio/mpeg">
-    </audio>
+    <!-- <iframe 
+    width="560"
+    height="315" 
+    src="https://www.youtube.com/embed/N8nGig78lNs?si=r5ZXeW4nbRdJhfuE" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe> -->
+    <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/EZZh4PAthZs?si=Qc4I__UU7gn3W48u" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
   </section>
 
   <section id="like" class="section">
@@ -89,7 +103,7 @@
     <br>
     <p>I might be off the planet but for you I would do everything, my sweet pookie❤️</p>
 
-    <form action="mailto:omni@viltrumite.gov" method="post" enctype="text/plain">
+    <form action="mailto:harelbr@post.bgu.ac.il" method="post" enctype="text/plain">
       <!--harelbr@post.bgu.ac.il-->
 
       <label>Your Email:</label><br>
@@ -134,6 +148,28 @@
       localStorage.setItem('likeCount', likeCount);
     });
   </script>
+
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent actual submission
+
+    // Get form values
+    const email = document.querySelector('input[name="email"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+    const mood = document.querySelector('select[name="mood"]').value;
+
+    // Simulate what would be sent
+    const emailBody = `
+      From: ${email}
+      Mood: ${mood}
+      Message: ${message}
+    `;
+
+    alert("📨 Message sent!\n\n" + emailBody);
+
+    this.reset();
+  });
+</script>
 
 </body>
 </html>
