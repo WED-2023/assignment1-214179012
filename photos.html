@@ -11,25 +11,13 @@
     </ul>
   </div>
 
-  <section class="section">
-    <h2>WHY YOU CLICKED!!!</h2>
-    <br>
-    <img src="properties/OMNICHEEKS.jpg" width="1200" height="600" alt="Omni-Man" />
-    <audio id="bgMusic" autoplay muted>
-      <source src="properties/Snail's House - Hot Milk.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-
-  <script>
-    // Try to unmute & play as soon as possible
-    window.addEventListener('DOMContentLoaded', () => {
-      const music = document.getElementById("bgMusic");
-      music.muted = false;
-      music.play().catch((e) => {
-        console.warn("Autoplay was blocked:", e);
-      });
-    });
-  </script>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/EZZh4PAthZs?autoplay=1&controls=0&modestbranding=1&showinfo=0&rel=0&enablejsapi=1" 
+      title="YouTube video player"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe></div>
 
 </body>
 </html>
