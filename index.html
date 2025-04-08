@@ -5,6 +5,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+   <!-- Load Facebook SDK for JavaScript -->
+   <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v22.0" nonce="FOKrbAYI"></script>
+
 
   <div id="menu">
     <ul>
@@ -66,7 +70,16 @@
 
   <section id="like" class="section">
     <h2>Give Me a Like</h2>
-    <button id="likeBtn">👍 Like <span id="likeCount">0</span></button>
+    <br>
+    <div class="fb-like" 
+     data-href="https://wed-2023.github.io/assignment1-214179012/" 
+     data-width="" 
+     data-layout="standard" 
+     data-action="like" 
+     data-size="large" 
+     data-share="true">
+    </div>
+
   </section>
 
   <section id="qrcode" class="section">
@@ -93,16 +106,16 @@
   <section id="contact" class="section">
     <h2>Contact Me</h2>
     <br>
-    <p>I might be off the planet but for you I would do everything, my sweet pookie❤️</p>
+    <p>I might be off the planet but feel free to contact me on any topic❤️</p>
 
     <form action="mailto:harelbr@post.bgu.ac.il" method="post" enctype="text/plain">
       <!--harelbr@post.bgu.ac.il-->
 
       <label>Your Email:</label><br>
-      <input type="email" name="email" required><br><br>
+      <input type="email" id="email" name="email" required><br><br>
 
       <label>Your Message:</label><br>
-      <textarea name="message" rows="4" required></textarea><br><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
       <label>Pick a Mood:</label><br>
       <select name="mood">
@@ -124,44 +137,6 @@
       });
     });
   </script>
-
-  <!-- Like Button Script -->
-  <script>
-    const btn = document.getElementById('likeBtn');
-    const counter = document.getElementById('likeCount');
-
-    // Load saved count from localStorage
-    let likeCount = localStorage.getItem('likeCount') || 0;
-    counter.textContent = likeCount;
-
-    btn.addEventListener('click', () => {
-      likeCount++;
-      counter.textContent = likeCount;
-      localStorage.setItem('likeCount', likeCount);
-    });
-  </script>
-
-<script>
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent actual submission
-
-    // Get form values
-    const email = document.querySelector('input[name="email"]').value;
-    const message = document.querySelector('textarea[name="message"]').value;
-    const mood = document.querySelector('select[name="mood"]').value;
-
-    // Simulate what would be sent
-    const emailBody = `
-      From: ${email}
-      Mood: ${mood}
-      Message: ${message}
-    `;
-
-    alert("📨 Message sent!\n\n" + emailBody);
-
-    this.reset();
-  });
-</script>
 
 </body>
 </html>
